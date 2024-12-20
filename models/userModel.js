@@ -23,9 +23,9 @@ const userSchema = mongoose.Schema({
         type: String,
         required: [true, 'City is required'],
     },
-    contry: {
+    country: {
         type: String,
-        required: [true, 'Contry is required'],
+        required: [true, 'Country is required'],
     },
     phone: {
         type: String,
@@ -36,4 +36,4 @@ const userSchema = mongoose.Schema({
     }
 }, { timestamps: true });
 
-export const User = mongoose.model("Users",userSchema)
+module.exports = mongoose.model("Users",userSchema)

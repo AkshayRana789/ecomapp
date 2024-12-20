@@ -15,6 +15,12 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+//routes import
+const userRoute = require('./routes/userRouters');
+
+//Use Routes
+app.use('/api/users',userRoute);
+
 const port = parseInt(process.env.PORT) || process.argv[3] || 8080;
 
 app.get("/", (req, res) => {
